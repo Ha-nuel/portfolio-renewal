@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   Box,
   Card,
@@ -9,12 +10,21 @@ import {
   styled,
 } from '@mui/material';
 
-import Project1 from '../assets/images/project1.png';
-import Project2 from '../assets/images/project2.png';
-import Project3 from '../assets/images/project3.png';
-import Stacks from '../assets/images/stacks.png';
+import intro from '/videos/ink.mp4';
+import Project1 from '/images/project1.png';
+import Project2 from '/images/project2.png';
+import Project3 from '/images/project3.png';
+import Stacks from '/images/stacks.png';
 
 function About() {
+  const [currentSection, setCurrentSection] = useState(-1);
+
+  const scrollEventListener = () => {
+    const deviceHeight = Math.floor(window.scrollY / window.innerHeight);
+
+    if (currentSection !== deviceHeight) setCurrentSection(deviceHeight);
+  };
+
   const SectionBox = styled(Box)`
     height: 100vh;
   `;
@@ -30,6 +40,26 @@ function About() {
     width: fit-content;
   `;
 
+  const BackVideo = styled('video')`
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+  `;
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollEventListener);
+
+    return () => {
+      window.removeEventListener('scroll', scrollEventListener);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(currentSection);
+  }, [currentSection]);
+
   return (
     <>
       <SectionBox
@@ -39,11 +69,14 @@ function About() {
           justifyContent: 'flex-end',
           textAlign: 'right',
           fontSize: '7rem',
-          backgroundColor: '#111  ',
+          backgroundColor: 'transparent  ',
         }}
       >
+        <BackVideo autoPlay muted play-inline>
+          <source src={intro} type='video/mp4' />
+        </BackVideo>
         <Box sx={{ mr: 8, color: 'white' }}>
-          안녕하세요? <br /> 제 이름은&nbsp;
+          안녕하세요. <br /> 제 이름은&nbsp;
           <span
             style={{
               fontFamily: 'suite-bold',
@@ -138,7 +171,7 @@ function About() {
           </StackText>
         </Box>
       </SectionBox>
-      <SectionBox sx={{ p: 7, background: '#f9f9fb' }}>
+      <SectionBox sx={{ p: 7 }}>
         <Box sx={{ mb: 15 }}>
           <Typography
             sx={{ fontFamily: 'suite-bold', fontSize: '2rem', mb: 5 }}

@@ -11,7 +11,7 @@ function Header() {
   const MenuButton = styled(Button)`
     margin-left: 2rem;
 
-    color: black;
+    color: white;
   `;
 
   return (
@@ -23,7 +23,7 @@ function Header() {
       }}
     >
       <Toolbar sx={{ mx: 1 }}>
-        <Typography sx={{ flexGrow: 1, color: 'black' }}>
+        <Typography sx={{ flexGrow: 1, color: 'white' }}>
           H A N U E L
         </Typography>
         <Box sx={{ display: 'flex' }}>

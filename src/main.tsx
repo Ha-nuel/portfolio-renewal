@@ -4,9 +4,9 @@ import App from './App.tsx';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { Global, css } from '@emotion/react';
 
-import fontSuite from './assets/fonts/SUITE-Regular.ttf';
-import fontSuiteBold from './assets/fonts/SUITE-Bold.ttf';
-import fontSuiteLight from './assets/fonts/SUITE-Light.ttf';
+import fontSuite from '/fonts/SUITE-Regular.ttf';
+import fontSuiteBold from '/fonts/SUITE-Bold.ttf';
+import fontSuiteLight from '/fonts/SUITE-Light.ttf';
 
 const globalStyle = css`
   @font-face {
@@ -16,12 +16,12 @@ const globalStyle = css`
 
   @font-face {
     font-family: 'suite-bold';
-    src: url('${fontSuiteBold});
+    src: url(${fontSuiteBold});
   }
 
   @font-face {
     font-family: 'suite-light';
-    src: url('${fontSuiteLight});
+    src: url(${fontSuiteLight});
   }
 
   * {
