@@ -13,9 +13,6 @@ import {
 } from '@mui/material';
 
 import intro from '/videos/ink.mp4';
-import Project1 from '/images/project1.png';
-import Project2 from '/images/project2.png';
-import Project3 from '/images/project3.png';
 import Stacks from '/images/stacks.png';
 import currentSectionState from '../utils/state';
 
