@@ -1,5 +1,3 @@
-# portfolio-renewal
-
 # 사용한 것들
 React, <br />
 Recoil, <br />
