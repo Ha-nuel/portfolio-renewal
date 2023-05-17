@@ -31,7 +31,20 @@ function Header() {
     <AppBar
       sx={{
         p: 4,
-        backgroundColor: 'transparent',
+        backgroundColor: [
+          'transparent',
+          'transparent',
+          currentSection === -1 || currentSection === 0 || currentSection === 4
+            ? 'transparent'
+            : 'rgba(255, 255, 255, 0.9)',
+        ],
+        backdropFilter: [
+          'none',
+          'none',
+          currentSection === -1 || currentSection === 0 || currentSection === 4
+            ? 'none'
+            : 'blur(8px)',
+        ],
         boxShadow: 'none',
       }}
     >
@@ -55,12 +68,18 @@ function Header() {
             sx={{
               color: getColor,
             }}
+            onClick={() => {
+              window.scrollTo(0, window.innerHeight * 0);
+            }}
           >
             소개
           </MenuButton>
           <MenuButton
             sx={{
               color: getColor,
+            }}
+            onClick={() => {
+              window.scrollTo(0, window.innerHeight * 2);
             }}
           >
             기술 스택
@@ -69,12 +88,21 @@ function Header() {
             sx={{
               color: getColor,
             }}
+            onClick={() => {
+              window.scrollTo(
+                0,
+                window.innerHeight * 3 - window.innerHeight / 5
+              );
+            }}
           >
             프로젝트
           </MenuButton>
           <MenuButton
             sx={{
               color: getColor,
+            }}
+            onClick={() => {
+              window.scrollTo(0, window.innerHeight * 4);
             }}
           >
             연락처
