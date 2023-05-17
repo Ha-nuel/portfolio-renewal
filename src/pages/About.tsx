@@ -11,9 +11,12 @@ import {
   Typography,
   styled,
 } from '@mui/material';
+import Lottie from 'lottie-react';
 
 import intro from '/videos/ink.mp4';
 import Stacks from '/images/stacks.png';
+import rocketAnimation from './rocket.json';
+
 import currentSectionState from '../utils/state';
 
 function About() {
@@ -276,6 +279,12 @@ function About() {
             alignItems: 'center',
           }}
         >
+          <Lottie
+            loop={true}
+            autoplay={true}
+            animationData={rocketAnimation}
+            style={{ width: '138px', height: '150px' }}
+          ></Lottie>
           <Box style={{ fontFamily: 'suite-bold', fontSize: '1rem' }}>
             EMAIL
           </Box>
