@@ -7,6 +7,7 @@ import {
   CardContent,
   CardMedia,
   Divider,
+  Grid,
   Typography,
   styled,
 } from '@mui/material';
@@ -174,139 +175,94 @@ function About() {
           </StackText>
         </Box>
       </SectionBox>
-      <SectionBox sx={{ p: 7 }}>
-        <Box sx={{ mb: 15 }}>
+      <SectionBox>
+        <Box mb={6} p={8}>
           <Typography
-            sx={{ fontFamily: 'suite-bold', fontSize: '2rem', mb: 5 }}
+            sx={{ mb: 1, fontSize: '2rem', fontFamily: 'suite-bold' }}
           >
             완성된 프로젝트
           </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
+          <Divider sx={{ mb: 3 }} />
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
-            <Card sx={{ width: ['90%', '50%', '30%'], m: 3 }}>
-              <CardActionArea href='https://github.com/Ha-nuel/project-web'>
-                <CardMedia
-                  component='img'
-                  height='100'
-                  image={Project1}
-                  alt='프로젝트 1'
-                  sx={{
-                    filter: 'blur(1px)',
-                  }}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant='h5'
-                    component='div'
-                    sx={{ p: 3, fontFamily: 'suite-bold' }}
-                  >
-                    포트폴리오 공유 사이트
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='text.secondary'
-                    sx={{ p: 3 }}
-                  >
-                    자신의 포트폴리오를 공유할 수 있는 사이트입니다.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card sx={{ width: ['90%', '50%', '30%'], m: 3 }}>
-              <CardActionArea href='https://github.com/Ha-nuel/project-data'>
-                <CardMedia
-                  component='img'
-                  height='100'
-                  image={Project2}
-                  alt='프로젝트 2'
-                  sx={{
-                    filter: 'blur(1px)',
-                  }}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant='h5'
-                    component='div'
-                    sx={{ p: 3, fontFamily: 'suite-bold' }}
-                  >
-                    나눔 쇼핑몰 사이트
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='text.secondary'
-                    sx={{ p: 3 }}
-                  >
-                    더이상 입지 못하는 옷들을 나눔하는 사이트입니다.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card sx={{ width: ['90%', '50%', '30%'], m: 3 }}>
-              <CardActionArea href='https://github.com/Ha-nuel/project-ai'>
-                <CardMedia
-                  component='img'
-                  height='100'
-                  image={Project3}
-                  alt='프로젝트 3'
-                  sx={{
-                    filter: 'blur(1px)',
-                  }}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant='h5'
-                    component='div'
-                    sx={{ p: 3, fontFamily: 'suite-bold' }}
-                  >
-                    감정 일기 사이트
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='text.secondary'
-                    sx={{ p: 3 }}
-                  >
-                    서로 간의 감정을 공유할 수 있는 일기 공유 사이트입니다.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Box>
+            <Grid item xs={3}>
+              <Card>
+                <CardActionArea>
+                  <CardMedia />
+                  <CardContent>
+                    <Typography sx={{ fontFamily: 'suite-bold' }}>
+                      포트폴리오 공유 사이트
+                    </Typography>
+                    <Typography sx={{ pt: 3 }}>
+                      자신의 포트폴리오를 공유할 수 있는 사이트입니다.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            <Grid item xs={3}>
+              <Card>
+                <CardActionArea>
+                  <CardMedia />
+                  <CardContent>
+                    <Typography sx={{ fontFamily: 'suite-bold' }}>
+                      헌 옷 나눔 사이트
+                    </Typography>
+                    <Typography sx={{ pt: 3 }}>
+                      더이상 못 입는 옷을 나눔할 수 있는 사이트입니다.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            <Grid item xs={3}>
+              <Card>
+                <CardActionArea>
+                  <CardContent>
+                    <Typography sx={{ fontFamily: 'suite-bold' }}>
+                      감정일기 공유 사이트
+                    </Typography>
+                    <Typography sx={{ pt: 3 }}>
+                      일기의 감정을 식별하고 서로 공유할 수 있는 사이트입니다.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          </Grid>
         </Box>
-        <Box sx={{ maxWidth: '100%' }}>
-          <Typography sx={{ fontFamily: 'suite-bold', fontSize: '2rem' }}>
+        <Box p={8}>
+          <Typography
+            sx={{ mb: 1, fontSize: '2rem', fontFamily: 'suite-bold' }}
+          >
             진행 중인 프로젝트
           </Typography>
-          <Card sx={{ width: ['90%', '50%', '30%'], m: 5 }}>
-            <CardActionArea>
-              <CardMedia />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant='h5'
-                  component='div'
-                  sx={{ p: 3, fontFamily: 'suite-bold' }}
-                >
-                  포트폴리오 프로젝트 팀원 모집 사이트
-                </Typography>
-                <Typography
-                  variant='body2'
-                  color='text.secondary'
-                  sx={{ p: 3 }}
-                >
-                  프로젝트 팀원들을 구할 수 있는 사이트입니다.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          <Divider sx={{ mb: 3 }} />
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          >
+            <Grid item xs={3}>
+              <Card>
+                <CardActionArea>
+                  <CardContent>
+                    <Typography sx={{ fontFamily: 'suite-bold' }}>
+                      프로젝트 팀원 모집 사이트
+                    </Typography>
+                    <Typography sx={{ pt: 3 }}>
+                      포트폴리오 프로젝트를 같이 만들 팀원을 모집하는
+                      사이트입니다.
+                    </Typography>
+                    <CardMedia />
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          </Grid>
         </Box>
       </SectionBox>
       <SectionBox

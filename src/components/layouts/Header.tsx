@@ -8,7 +8,6 @@ import {
 } from '@mui/material';
 import { useRecoilValue } from 'recoil';
 import currentSectionState from '../../utils/state';
-import { useEffect } from 'react';
 
 function Header() {
   const currentSection = useRecoilValue(currentSectionState);
@@ -23,10 +22,6 @@ function Header() {
         return 'black';
     }
   };
-
-  useEffect(() => {
-    console.log('header' + currentSection);
-  }, [currentSection]);
 
   const MenuButton = styled(Button)`
     margin-left: 2rem;
