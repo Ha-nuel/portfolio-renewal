@@ -9,6 +9,11 @@ import {
   styled,
 } from '@mui/material';
 
+import Project1 from '../assets/images/project1.png';
+import Project2 from '../assets/images/project2.png';
+import Project3 from '../assets/images/project3.png';
+import Stacks from '../assets/images/stacks.png';
+
 function About() {
   const SectionBox = styled(Box)`
     height: 100vh;
@@ -99,7 +104,7 @@ function About() {
       </SectionBox>
       <SectionBox
         sx={{
-          backgroundImage: 'url(/images/stacks.png)',
+          backgroundImage: `url(${Stacks})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           position: 'relative',
@@ -153,7 +158,7 @@ function About() {
                 <CardMedia
                   component='img'
                   height='100'
-                  image='/images/project1.png'
+                  image={Project1}
                   alt='프로젝트 1'
                   sx={{
                     filter: 'blur(1px)',
@@ -183,7 +188,7 @@ function About() {
                 <CardMedia
                   component='img'
                   height='100'
-                  image='/images/project2.png'
+                  image={Project2}
                   alt='프로젝트 2'
                   sx={{
                     filter: 'blur(1px)',
@@ -213,7 +218,7 @@ function About() {
                 <CardMedia
                   component='img'
                   height='100'
-                  image='/images/project3.png'
+                  image={Project3}
                   alt='프로젝트 3'
                   sx={{
                     filter: 'blur(1px)',

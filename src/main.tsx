@@ -4,20 +4,24 @@ import App from './App.tsx';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { Global, css } from '@emotion/react';
 
+import fontSuite from './assets/fonts/SUITE-Regular.ttf';
+import fontSuiteBold from './assets/fonts/SUITE-Bold.ttf';
+import fontSuiteLight from './assets/fonts/SUITE-Light.ttf';
+
 const globalStyle = css`
   @font-face {
     font-family: 'suite';
-    src: url('/fonts/SUITE-Regular.ttf');
+    src: url(${fontSuite});
   }
 
   @font-face {
     font-family: 'suite-bold';
-    src: url('/fonts/SUITE-Bold.ttf');
+    src: url('${fontSuiteBold});
   }
 
   @font-face {
     font-family: 'suite-light';
-    src: url('/fonts/SUITE-Light.ttf');
+    src: url('${fontSuiteLight});
   }
 
   * {
