@@ -57,10 +57,6 @@ function About() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(currentSection);
-  }, [currentSection]);
-
   return (
     <>
       <SectionBox
@@ -81,9 +77,6 @@ function About() {
           <span
             style={{
               fontFamily: 'suite-bold',
-              // textDecoration: 'underline',
-              // textDecorationThickness: '6px',
-              // textUnderlineOffset: '1rem',
             }}
           >
             이하늘
@@ -168,7 +161,7 @@ function About() {
         >
           <StackText>비록 아직 부족한 점이 많지만</StackText>
           <StackText>
-            꾸준히 노력하면서 계속 발전하려 노력하고 있습니다.
+            꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
           </StackText>
         </Box>
       </SectionBox>
@@ -274,10 +267,21 @@ function About() {
           fontSize: '1rem',
         }}
       >
-        <Box sx={{ fontSize: '0.8rem' }}>
-          <span style={{ fontFamily: 'suite', fontSize: '1rem' }}>
+        <Box
+          sx={{
+            fontSize: '0.8rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Box style={{ fontFamily: 'suite-bold', fontSize: '1rem' }}>
+            EMAIL
+          </Box>
+          <Box style={{ fontFamily: 'suite', fontSize: '1rem' }}>
             edcrfv901@naver.com
-          </span>
+          </Box>
         </Box>
       </SectionBox>
     </>
