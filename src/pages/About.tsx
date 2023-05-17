@@ -50,6 +50,8 @@ function About() {
     bottom: 0;
     z-index: -1;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   `;
 
   useEffect(() => {
@@ -66,10 +68,10 @@ function About() {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'flex-end',
+          justifyContent: ['flex-end', 'center', 'flex-end'],
           textAlign: 'right',
-          fontSize: '7rem',
-          backgroundColor: 'transparent  ',
+          fontSize: ['1.5rem', '2rem', '7rem'],
+          backgroundColor: 'transparent',
         }}
       >
         <BackVideo autoPlay muted play-inline>
@@ -110,22 +112,30 @@ function About() {
           <Typography
             sx={{
               fontFamily: 'suite-bold',
-              fontSize: '3rem',
+              fontSize: ['1.5rem', '2rem', '3rem'],
             }}
           >
             전공
           </Typography>
-          <Typography sx={{ fontSize: '3rem' }}>정보통신과</Typography>
+          <Typography sx={{ fontSize: ['1.5rem', '2rem', '3rem'] }}>
+            정보통신과
+          </Typography>
         </Box>
         <Divider
           sx={{
-            width: '5%',
+            width: ['20%', '20%', '5%'],
             borderWidth: 4,
             mt: 16,
             backgroundColor: 'black',
           }}
         />
-        <Typography sx={{ mt: 4, fontSize: '2rem' }}>
+        <Typography
+          sx={{
+            mt: 4,
+            mx: 2,
+            fontSize: ['1.25rem', '1.5rem', '2rem'],
+          }}
+        >
           코드에 대한 <span style={{ fontFamily: 'suite-bold' }}>탐구</span>로
           새로운 <span style={{ fontFamily: 'suite-bold' }}>기술</span>을 찾는
           시간에 <span style={{ fontFamily: 'suite-bold' }}>집중</span>하고
@@ -134,50 +144,128 @@ function About() {
       </SectionBox>
       <SectionBox
         sx={{
-          backgroundImage: `url(${Stacks})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
           position: 'relative',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
         }}
       >
         <Box
           sx={{
+            fontSize: '1rem',
+            opacity: [100, 100, 0],
+            alignSelf: 'flex-start',
+          }}
+        >
+          <StackText
+            sx={{
+              fontSize: ['1rem', '1.3rem', '1.2rem'],
+            }}
+          >
+            3번의 팀 프로젝트를 통해
+          </StackText>
+          <StackText
+            sx={{
+              fontSize: ['1rem', '1.3rem', '1.2rem'],
+            }}
+          >
+            해당 기술 스택들을 숙지하게 되었습니다.
+          </StackText>
+        </Box>
+        <img
+          src={Stacks}
+          alt='기술 스택 이미지'
+          style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
+        />
+        <Box
+          sx={{
+            fontSize: '1rem',
+            opacity: [100, 100, 0],
+            alignSelf: 'flex-end',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
+            mt: 3,
+          }}
+        >
+          <StackText
+            sx={{
+              fontSize: ['1rem', '1.3rem', '1.2rem'],
+            }}
+          >
+            비록 아직 부족한 점이 많지만
+          </StackText>
+          <StackText
+            sx={{
+              fontSize: ['1rem', '1.3rem', '1.2rem'],
+            }}
+          >
+            꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
+          </StackText>
+        </Box>
+        <Box
+          sx={{
             position: 'absolute',
-            top: '250px',
-            right: '70%',
+            top: ['250px'],
+            right: ['70%'],
             textAlign: 'right',
           }}
         >
-          <StackText>3번의 팀 프로젝트를 통해</StackText>
-          <StackText>해당 기술 스택들을 숙지하게 되었습니다.</StackText>
+          <StackText
+            sx={{
+              fontSize: ['1rem', '1.2rem'],
+              opacity: [0, 0, 100],
+            }}
+          >
+            3번의 팀 프로젝트를 통해
+          </StackText>
+          <StackText
+            sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
+          >
+            해당 기술 스택들을 숙지하게 되었습니다.
+          </StackText>
         </Box>
         <Box
           sx={{
             position: 'absolute',
             top: '650px',
-            right: '10%',
+            right: ['90%', '10%'],
             textAlign: 'left',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-end',
           }}
         >
-          <StackText>비록 아직 부족한 점이 많지만</StackText>
-          <StackText>
+          <StackText
+            sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
+          >
+            비록 아직 부족한 점이 많지만
+          </StackText>
+          <StackText
+            sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
+          >
             꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
           </StackText>
         </Box>
       </SectionBox>
-      <SectionBox>
-        <Box mb={6} p={8}>
+      <SectionBox sx={{ height: ['150vh', '120vh', '100vh'] }}>
+        <Box mb={[-8, 6, 6]} p={8}>
           <Typography
-            sx={{ mb: 1, fontSize: '2rem', fontFamily: 'suite-bold' }}
+            sx={{
+              mb: 1,
+              fontSize: ['1rem', '2rem'],
+              fontFamily: 'suite-bold',
+              textAlign: ['center', 'center', 'left'],
+            }}
           >
             완성된 프로젝트
           </Typography>
           <Divider sx={{ mb: 3 }} />
           <Grid
             container
+            direction={['column', 'column', 'row']}
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
@@ -229,13 +317,19 @@ function About() {
         </Box>
         <Box p={8}>
           <Typography
-            sx={{ mb: 1, fontSize: '2rem', fontFamily: 'suite-bold' }}
+            sx={{
+              mb: 1,
+              fontSize: ['1rem', '2rem'],
+              fontFamily: 'suite-bold',
+              textAlign: ['center', 'center', 'left'],
+            }}
           >
             진행 중인 프로젝트
           </Typography>
           <Divider sx={{ mb: 3 }} />
           <Grid
             container
+            direction={['column', 'column', 'row']}
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >

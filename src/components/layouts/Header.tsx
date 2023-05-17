@@ -40,6 +40,7 @@ function Header() {
           sx={{
             flexGrow: 1,
             color: getColor,
+            opacity: [0, 0, 100],
           }}
         >
           H A N U E L
@@ -47,6 +48,7 @@ function Header() {
         <Box
           sx={{
             display: 'flex',
+            opacity: [0, 0, 100],
           }}
         >
           <MenuButton
