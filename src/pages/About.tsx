@@ -271,7 +271,7 @@ function About() {
           >
             <Grid item xs={3}>
               <Card>
-                <CardActionArea>
+                <CardActionArea href='https://github.com/Ha-nuel/project-web'>
                   <CardMedia />
                   <CardContent>
                     <Typography sx={{ fontFamily: 'suite-bold' }}>
@@ -286,7 +286,7 @@ function About() {
             </Grid>
             <Grid item xs={3}>
               <Card>
-                <CardActionArea>
+                <CardActionArea href='https://github.com/Ha-nuel/project-data'>
                   <CardMedia />
                   <CardContent>
                     <Typography sx={{ fontFamily: 'suite-bold' }}>
@@ -301,7 +301,7 @@ function About() {
             </Grid>
             <Grid item xs={3}>
               <Card>
-                <CardActionArea>
+                <CardActionArea href='https://github.com/Ha-nuel/project-ai'>
                   <CardContent>
                     <Typography sx={{ fontFamily: 'suite-bold' }}>
                       감정일기 공유 사이트
