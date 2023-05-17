@@ -7,6 +7,7 @@ import { Global, css } from '@emotion/react';
 import fontSuite from '/fonts/SUITE-Regular.ttf';
 import fontSuiteBold from '/fonts/SUITE-Bold.ttf';
 import fontSuiteLight from '/fonts/SUITE-Light.ttf';
+import { RecoilRoot } from 'recoil';
 
 const globalStyle = css`
   @font-face {
@@ -40,7 +41,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <CssBaseline />
     <Global styles={globalStyle} />
     <ThemeProvider theme={theme}>
-      <App />
+      <RecoilRoot>
+        <App />
+      </RecoilRoot>
     </ThemeProvider>
   </React.StrictMode>
 );

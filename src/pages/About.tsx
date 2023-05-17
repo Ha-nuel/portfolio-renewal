@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
 import {
   Box,
   Card,
@@ -15,9 +16,11 @@ import Project1 from '/images/project1.png';
 import Project2 from '/images/project2.png';
 import Project3 from '/images/project3.png';
 import Stacks from '/images/stacks.png';
+import currentSectionState from '../utils/state';
 
 function About() {
-  const [currentSection, setCurrentSection] = useState(-1);
+  const [currentSection, setCurrentSection] =
+    useRecoilState(currentSectionState);
 
   const scrollEventListener = () => {
     const deviceHeight = Math.floor(window.scrollY / window.innerHeight);
