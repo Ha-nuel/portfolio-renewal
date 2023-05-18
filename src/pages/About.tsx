@@ -150,7 +150,7 @@ function About() {
           flexDirection: 'column',
         }}
       >
-        <Box sx={{ position: 'relative' }}>
+        <Box sx={{ position: 'relative', mx: 60 }}>
           <Box
             sx={{
               fontSize: '1rem',
