@@ -15,7 +15,7 @@ import Lottie from 'lottie-react';
 
 import intro from '/videos/ink.mp4';
 import Stacks from '/images/stacks.png';
-import rocketAnimation from './rocket.json';
+import rocketAnimation from '../assets/images/rocket.json';
 
 import currentSectionState from '../utils/state';
 
@@ -144,110 +144,111 @@ function About() {
       </SectionBox>
       <SectionBox
         sx={{
-          position: 'relative',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
         }}
       >
-        <Box
-          sx={{
-            fontSize: '1rem',
-            opacity: [100, 100, 0],
-            alignSelf: 'flex-start',
-          }}
-        >
-          <StackText
+        <Box sx={{ position: 'relative' }}>
+          <Box
             sx={{
-              fontSize: ['1rem', '1.3rem', '1.2rem'],
+              fontSize: '1rem',
+              opacity: [100, 100, 0],
+              alignSelf: 'flex-start',
             }}
           >
-            3번의 팀 프로젝트를 통해
-          </StackText>
-          <StackText
+            <StackText
+              sx={{
+                fontSize: ['1rem', '1.3rem', '1.2rem'],
+              }}
+            >
+              3번의 팀 프로젝트를 통해
+            </StackText>
+            <StackText
+              sx={{
+                fontSize: ['1rem', '1.3rem', '1.2rem'],
+              }}
+            >
+              해당 기술 스택들을 숙지하게 되었습니다.
+            </StackText>
+          </Box>
+          <img
+            src={Stacks}
+            alt='기술 스택 이미지'
+            style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
+          />
+          <Box
             sx={{
-              fontSize: ['1rem', '1.3rem', '1.2rem'],
+              fontSize: '1rem',
+              opacity: [100, 100, 0],
+              alignSelf: 'flex-end',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              alignItems: 'flex-end',
+              mt: 3,
             }}
           >
-            해당 기술 스택들을 숙지하게 되었습니다.
-          </StackText>
-        </Box>
-        <img
-          src={Stacks}
-          alt='기술 스택 이미지'
-          style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
-        />
-        <Box
-          sx={{
-            fontSize: '1rem',
-            opacity: [100, 100, 0],
-            alignSelf: 'flex-end',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            alignItems: 'flex-end',
-            mt: 3,
-          }}
-        >
-          <StackText
+            <StackText
+              sx={{
+                fontSize: ['1rem', '1.3rem', '1.2rem'],
+              }}
+            >
+              비록 아직 부족한 점이 많지만
+            </StackText>
+            <StackText
+              sx={{
+                fontSize: ['1rem', '1.3rem', '1.2rem'],
+              }}
+            >
+              꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
+            </StackText>
+          </Box>
+          <Box
             sx={{
-              fontSize: ['1rem', '1.3rem', '1.2rem'],
+              position: 'absolute',
+              top: ['100px'],
+              right: ['120%'],
+              textAlign: 'right',
             }}
           >
-            비록 아직 부족한 점이 많지만
-          </StackText>
-          <StackText
+            <StackText
+              sx={{
+                fontSize: ['1rem', '1.2rem'],
+                opacity: [0, 0, 100],
+              }}
+            >
+              3번의 팀 프로젝트를 통해
+            </StackText>
+            <StackText
+              sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
+            >
+              해당 기술 스택들을 숙지하게 되었습니다.
+            </StackText>
+          </Box>
+          <Box
             sx={{
-              fontSize: ['1rem', '1.3rem', '1.2rem'],
+              position: 'absolute',
+              bottom: '100px',
+              left: ['118%'],
+              textAlign: 'left',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
             }}
           >
-            꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
-          </StackText>
-        </Box>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: ['250px'],
-            right: ['70%'],
-            textAlign: 'right',
-          }}
-        >
-          <StackText
-            sx={{
-              fontSize: ['1rem', '1.2rem'],
-              opacity: [0, 0, 100],
-            }}
-          >
-            3번의 팀 프로젝트를 통해
-          </StackText>
-          <StackText
-            sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
-          >
-            해당 기술 스택들을 숙지하게 되었습니다.
-          </StackText>
-        </Box>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '650px',
-            right: ['90%', '10%'],
-            textAlign: 'left',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-          }}
-        >
-          <StackText
-            sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
-          >
-            비록 아직 부족한 점이 많지만
-          </StackText>
-          <StackText
-            sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
-          >
-            꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
-          </StackText>
+            <StackText
+              sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
+            >
+              비록 아직 부족한 점이 많지만
+            </StackText>
+            <StackText
+              sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
+            >
+              꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
+            </StackText>
+          </Box>
         </Box>
       </SectionBox>
       <SectionBox sx={{ height: ['150vh', '120vh', '100vh'] }}>
