@@ -33,16 +33,24 @@ function About() {
     height: 100vh;
   `;
 
-  const StackText = styled('span')`
-    display: block;
-    background: #0a0a0a;
-    color: white;
-    margin-bottom: 12px;
-    padding: 4px 8px;
-    white-space: nowrap;
-    font-size: 1.2rem;
-    width: fit-content;
-  `;
+  const StackText = styled('span')(({ theme }) => ({
+    fontSize: '1.2rem',
+    display: 'block',
+    background: '#0a0a0a',
+    color: 'white',
+    marginBottom: '12px',
+    padding: '4px 8px',
+    whiteSpace: 'nowrap',
+    width: 'fit-content',
+
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '1rem',
+    },
+
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '0.9rem',
+    },
+  }));
 
   const BackVideo = styled('video')`
     position: absolute;
@@ -215,15 +223,12 @@ function About() {
           >
             <StackText
               sx={{
-                fontSize: ['1rem', '1.2rem'],
                 opacity: [0, 0, 100],
               }}
             >
               3번의 팀 프로젝트를 통해
             </StackText>
-            <StackText
-              sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
-            >
+            <StackText sx={{ opacity: [0, 0, 100] }}>
               해당 기술 스택들을 숙지하게 되었습니다.
             </StackText>
           </Box>
@@ -238,14 +243,10 @@ function About() {
               alignItems: 'flex-end',
             }}
           >
-            <StackText
-              sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
-            >
+            <StackText sx={{ opacity: [0, 0, 100] }}>
               비록 아직 부족한 점이 많지만
             </StackText>
-            <StackText
-              sx={{ fontSize: ['1rem', '1.2rem'], opacity: [0, 0, 100] }}
-            >
+            <StackText sx={{ opacity: [0, 0, 100] }}>
               꾸준히 노력하면서 계속 발전해 나가려 하고 있습니다.
             </StackText>
           </Box>
